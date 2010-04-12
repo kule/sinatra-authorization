@@ -5,7 +5,7 @@ require "pending"
 
 require File.dirname(__FILE__) + "/../lib/sinatra/authorization"
 
-class AuthorizationApp < Sinatra::Default
+class AuthorizationApp < Sinatra::Application
   set :environment, :test
 
   get "/" do
@@ -37,7 +37,7 @@ class SinatraAuthorizationTest < Test::Unit::TestCase
   it "is authorized with correct credentials" do
     @session.get "/", {}, basic_auth
     assert_equal 200, @session.last_response.status
-    assert_equal ["Welcome in protected zone"], @session.last_response.body
+    assert_equal "Welcome in protected zone", @session.last_response.body
   end
 
   it "sets REMOTE_USER" do
