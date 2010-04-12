@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name     = "sinatra-authorization"
   s.rubyforge_project = "integrity"
-  s.version  = "1.0.0"
+  s.version  = "1.0.1"
   s.date     = "2009-04-19"
   s.summary  = "HTTP Authorization helpers for Sinatra."
   s.description  = "HTTP Authorization helpers for Sinatra."
@@ -16,5 +16,5 @@ sinatra-authorization.gemspec
 lib/sinatra/authorization.rb
 test/authorization_test.rb
 ]
-  s.add_dependency("sinatra", [">= 0.9.1.1"])
+  s.add_dependency("sinatra", [">= 1.0"])
 end
